@@ -1,0 +1,9 @@
+# Extract / load
+requests>=2.31
+tenacity>=8.2
+python-dotenv>=1.0
+pandas>=2.0
+duckdb>=1.1                          # local exploration + CSV -> Parquet before upload
+snowflake-connector-python>=3.12
+
+# dbt runs in dbt Cloud (project in dbt/), so dbt isn't installed locally.

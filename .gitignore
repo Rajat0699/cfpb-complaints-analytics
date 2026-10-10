@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+.idea/
+.vscode/
+
+# data never goes in git
+data/raw/*
+data/landing/**
+data/state.json
+data/*.duckdb
+data/*.duckdb.wal
+!data/**/.gitkeep
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+
+# Snowflake private keys (make_keys.sh writes them to ~/.snowflake, but just in case)
+*.p8

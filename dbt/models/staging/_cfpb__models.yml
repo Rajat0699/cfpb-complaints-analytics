@@ -1,0 +1,44 @@
+models:
+  - name: stg_cfpb__complaints
+    description: >
+      One row per complaint, typed and cleaned: dates parsed, 'None' strings nulled,
+      Yes/No and tags turned into booleans, columns renamed.
+    columns:
+      - name: complaint_id
+        data_tests:
+          - unique
+          - not_null
+      - name: date_received
+        data_tests:
+          - not_null
+      - name: date_sent_to_company
+        data_tests:
+          - not_null
+      - name: product
+        data_tests:
+          - not_null
+      - name: company_name
+        data_tests:
+          - not_null
+      - name: is_timely_response
+        data_tests:
+          - not_null
+      - name: submitted_via
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["Web", "Referral", "Phone", "Postal mail", "Fax", "Email"]
+      - name: company_response
+        description: Company's response to the consumer. 'In progress' until the company closes it.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - Closed with explanation
+                  - Closed with non-monetary relief
+                  - Closed with monetary relief
+                  - Closed without relief
+                  - Closed with relief
+                  - Closed
+                  - In progress
+                  - Untimely response

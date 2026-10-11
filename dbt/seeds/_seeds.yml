@@ -1,0 +1,13 @@
+seeds:
+  - name: product_mapping
+    description: >
+      Maps the 21 CFPB product names (renamed in 2017 and 2023) to 12 stable product families.
+    columns:
+      - name: product
+        description: Product name exactly as published by the CFPB.
+        data_tests:
+          - unique
+          - not_null
+      - name: product_family
+        data_tests:
+          - not_null

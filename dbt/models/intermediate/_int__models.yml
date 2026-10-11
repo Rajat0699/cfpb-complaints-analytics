@@ -1,0 +1,29 @@
+models:
+  - name: int_complaints__enriched
+    description: >
+      One row per complaint with product family, credit-bureau flag,
+      relief outcome and days to forward to the company.
+    columns:
+      - name: complaint_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product
+        description: Every product must exist in the product_mapping seed.
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('product_mapping')
+                field: product
+
+      - name: product_family
+        description: Null means a new CFPB product name is missing from seeds/product_mapping.csv.
+        data_tests:
+          - not_null
+
+      - name: relief_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Monetary', 'Non-monetary', 'Relief (type not recorded)', 'No relief']

@@ -1,0 +1,33 @@
+models:
+  - name: mart_monthly_trends
+    description: Complaint counts by month, product family, bureau flag and consumer group.
+    columns:
+      - name: complaint_month
+        data_tests: [not_null]
+      - name: product_family
+        data_tests: [not_null]
+
+  - name: mart_company_scorecard
+    description: Complaint outcomes by company, year and product family.
+    columns:
+      - name: company_name
+        data_tests: [not_null]
+      - name: complaint_year
+        data_tests: [not_null]
+
+  - name: mart_issue_summary
+    description: Complaint counts and outcomes by year, product family and issue.
+    columns:
+      - name: complaint_year
+        data_tests: [not_null]
+
+  - name: mart_state_summary
+    description: Complaints per state and year, with complaints per 100K residents.
+    columns:
+      - name: state_code
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_state')
+                field: state_code

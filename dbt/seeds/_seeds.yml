@@ -11,3 +11,22 @@ seeds:
       - name: product_family
         data_tests:
           - not_null
+
+  - name: state_population
+    description: >
+      Every state code found in the complaints data. Population is the U.S. Census Bureau
+      July 1, 2025 estimate (NST-EST2025) for the 50 states, DC and Puerto Rico; other
+      territories and military (AA/AE/AP) codes have no population.
+    config:
+      column_types:
+        population_2025: number
+    columns:
+      - name: state_code
+        data_tests:
+          - unique
+          - not_null
+      - name: state_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['State', 'District', 'Territory', 'Freely associated state', 'Military']

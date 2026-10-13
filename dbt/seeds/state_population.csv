@@ -1,0 +1,64 @@
+state_code,state_name,state_type,census_region,population_2025
+AK,Alaska,State,West,737270
+AL,Alabama,State,South,5193088
+AR,Arkansas,State,South,3114791
+AZ,Arizona,State,West,7623818
+CA,California,State,West,39355309
+CO,Colorado,State,West,6012561
+CT,Connecticut,State,Northeast,3688496
+DC,District of Columbia,District,South,693645
+DE,Delaware,State,South,1059952
+FL,Florida,State,South,23462518
+GA,Georgia,State,South,11302748
+HI,Hawaii,State,West,1432820
+IA,Iowa,State,Midwest,3238387
+ID,Idaho,State,West,2029733
+IL,Illinois,State,Midwest,12719141
+IN,Indiana,State,Midwest,6973333
+KS,Kansas,State,Midwest,2977220
+KY,Kentucky,State,South,4606864
+LA,Louisiana,State,South,4618189
+MA,Massachusetts,State,Northeast,7154084
+MD,Maryland,State,South,6265347
+ME,Maine,State,Northeast,1414874
+MI,Michigan,State,Midwest,10127884
+MN,Minnesota,State,Midwest,5830405
+MO,Missouri,State,Midwest,6270541
+MS,Mississippi,State,South,2954160
+MT,Montana,State,West,1144694
+NC,North Carolina,State,South,11197968
+ND,North Dakota,State,Midwest,799358
+NE,Nebraska,State,Midwest,2018006
+NH,New Hampshire,State,Northeast,1415342
+NJ,New Jersey,State,Northeast,9548215
+NM,New Mexico,State,West,2125498
+NV,Nevada,State,West,3282188
+NY,New York,State,Northeast,20002427
+OH,Ohio,State,Midwest,11900510
+OK,Oklahoma,State,South,4123288
+OR,Oregon,State,West,4273586
+PA,Pennsylvania,State,Northeast,13059432
+PR,Puerto Rico,Territory,,3184835
+RI,Rhode Island,State,Northeast,1114521
+SC,South Carolina,State,South,5570274
+SD,South Dakota,State,Midwest,935094
+TN,Tennessee,State,South,7315076
+TX,Texas,State,South,31709821
+UT,Utah,State,West,3538904
+VA,Virginia,State,South,8880107
+VT,Vermont,State,Northeast,644663
+WA,Washington,State,West,8001020
+WI,Wisconsin,State,Midwest,5972787
+WV,West Virginia,State,South,1766147
+WY,Wyoming,State,West,588753
+VI,U.S. Virgin Islands,Territory,,
+GU,Guam,Territory,,
+AS,American Samoa,Territory,,
+MP,Northern Mariana Islands,Territory,,
+UNITED STATES MINOR OUTLYING ISLANDS,U.S. Minor Outlying Islands,Territory,,
+FM,Federated States of Micronesia,Freely associated state,,
+MH,Marshall Islands,Freely associated state,,
+PW,Palau,Freely associated state,,
+AA,Armed Forces Americas,Military,,
+AE,Armed Forces Europe,Military,,
+AP,Armed Forces Pacific,Military,,

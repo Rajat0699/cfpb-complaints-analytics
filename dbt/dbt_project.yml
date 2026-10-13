@@ -3,17 +3,26 @@ version: "1.0.0"
 profile: cfpb_complaints   # ignored by dbt Cloud (it uses the project's Snowflake connection)
 
 model-paths: ["models"]
+seed-paths: ["seeds"]
 test-paths: ["tests"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
+analysis-paths: ["analysis"]
 
 clean-targets: ["target", "dbt_packages"]
 
 models:
   cfpb_complaints:
     staging:
-      +schema: staging          # -> <target schema>_staging, e.g. ANALYTICS_STAGING
+      +schema: staging          # -> dbt_rajat_staging
+      +materialized: view
+    intermediate:
+      +schema: intermediate     # -> dbt_rajat_intermediate
       +materialized: view
     marts:
       +schema: marts
       +materialized: table
+
+seeds:
+  cfpb_complaints:
+    +schema: seeds              # -> dbt_rajat_seeds

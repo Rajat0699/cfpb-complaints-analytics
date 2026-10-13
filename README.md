@@ -3,6 +3,12 @@
 End-to-end ELT project on the CFPB Consumer Complaint Database (~18M complaints):
 **CFPB API / bulk file → Python (+ DuckDB) → Snowflake (RAW) → dbt Cloud → marts → dashboard.**
 
+-Complaints grew 20× in six years (277K in 2019 to 5.4M in 2025), and the three credit bureaus now account for 88% of them. Complaints about everyone else still grew 4.8×.
+-Payment apps are the fastest-growing complaint category (16.7×). The two largest reported relief on 0 of ~65,000 closed complaints in 2024–25, while PayPal reported 29%.
+-Bureau “relief” figures can’t be trusted at face value. Experian’s relief rate fell from 45% to 0.4% in three years while Equifax’s rose from 0% to 64%, which looks like classification changes, not real outcomes.
+-Complaints are concentrated in the South. All top 10 states per resident are Southern; Georgia is 2.4× the national rate and 22× South Dakota.
+-Servicemembers get relief less often than other consumers in 8 of 11 product families, while older Americans get it more often.
+
 ## Project structure
 
 | Folder | Phase | Status |
